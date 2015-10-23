@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css"/>
+    <style type="text/css">
+        .circle{
+            width: 100px;
+            height: 100px;
+            border: 10px solid pink;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-animation: 2s rotate linear infinite;
+        }
+
+        .circle:after{
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            background-color: #4285F4;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @-webkit-keyframes rotate {
+            0%{
+                -webkit-transform: translate(-50%, -50%) rotate(0deg);
+                -moz-transform: translate(-50%, -50%) rotate(0deg);
+                -ms-transform: translate(-50%, -50%) rotate(0deg);
+                -o-transform: translate(-50%, -50%) rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            50%{
+                -webkit-transform: translate(-50%, -50%) rotate(180deg);
+                -moz-transform: translate(-50%, -50%) rotate(180deg);
+                -ms-transform: translate(-50%, -50%) rotate(180deg);
+                -o-transform: translate(-50%, -50%) rotate(180deg);
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+
+            100%{
+                -webkit-transform: translate(-50%, -50%) rotate(360deg);
+                -moz-transform: translate(-50%, -50%) rotate(360deg);
+                -ms-transform: translate(-50%, -50%) rotate(360deg);
+                -o-transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="circle"></div>
+</body>
+</html>

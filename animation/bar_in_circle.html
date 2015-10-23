@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css"/>
+    <style type="text/css">
+        .bar{
+            width: 200px;
+            height: 20px;
+            background-color: pink;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+        }
+
+        .bar:before{
+            content: '';
+            display: block;
+            width: 0px;
+            height: 100%;
+            background-color: #4285F4;
+            -webkit-animation: 3s to_full linear infinite;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+        }
+
+        @-webkit-keyframes to_full {
+            0%{
+                width: 0;
+                background-color: #4285F4;
+            }
+
+            50%{
+                width: 100%;
+                background-color: red;
+            }
+
+            100%{
+                width: 0;
+                background-color: #4285F4;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bar"></div>
+</body>
+</html>
